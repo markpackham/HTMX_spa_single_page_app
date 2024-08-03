@@ -1,0 +1,6 @@
+each article in articles
+    .article
+        //- for dyanmic content we use #{}
+        h3 #{article.name}
+        p #{article.body.slice(0,100)}...
+        a.btn View Details
