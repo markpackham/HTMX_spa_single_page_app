@@ -20,10 +20,9 @@ router.post("/articles", (req, res) => {
     name,
     body,
   };
-
   articles.push(article);
 
-  res.render("partials/list", { article: articles });
+  res.render("partials/list", { articles });
 });
 
 export default router;
