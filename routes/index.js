@@ -7,4 +7,8 @@ router.get("/", (req, res) => {
   res.render("index", { title: "Product Listing", articles: articles });
 });
 
+router.get("/articles/:id", (req, res) => {
+  const article = articles.find((a) => a.id === parseInt(req.params.id));
+});
+
 export default router;
