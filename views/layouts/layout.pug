@@ -11,4 +11,6 @@ html
       nav
         img(src="/shuriken.png")
         h1 Demo of HTMX SPA / Single Page Application
-    block content
+    //- Tell htmx only to swap content in the scope of this div - ignore stuff outside of it
+    div(hx-history-elt)
+      block content
