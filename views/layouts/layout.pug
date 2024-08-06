@@ -6,7 +6,7 @@ html
     script(src="https://unpkg.com/htmx.org@1.9.12")
     //- hx-boost allows us to use href rather than having to do the following bellow
     //- hx-get hx-target="body" hx-push-url="true"
-  body(hx-boost="true")
+  body(hx-boost="true" hx-indicator=".loader")
     header
       nav
         img(src="/shuriken.png")
@@ -14,3 +14,4 @@ html
     //- Tell htmx only to swap content in the scope of this div - ignore stuff outside of it
     div(hx-history-elt)
       block content
+    include ../partials/loader

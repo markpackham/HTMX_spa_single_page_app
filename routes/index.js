@@ -22,7 +22,10 @@ router.post("/articles", (req, res) => {
   };
   articles.push(article);
 
-  res.render("partials/list", { articles });
+  // Delay added so there's an excuse to use a loader
+  setTimeout(() => {
+    res.render("partials/list", { articles });
+  }, 1500);
 });
 
 export default router;
